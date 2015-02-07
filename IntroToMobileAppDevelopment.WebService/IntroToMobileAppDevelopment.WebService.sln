@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroToMobileAppDevelopment.WebService", "IntroToMobileAppDevelopment.WebService\IntroToMobileAppDevelopment.WebService.csproj", "{2D9F766B-EFD5-4AAB-9C7F-7899274A73E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroToMobileAppDevelopment.WebService.Tests", "IntroToMobileAppDevelopment.WebService.Tests\IntroToMobileAppDevelopment.WebService.Tests.csproj", "{34E5B02B-3615-4793-A5FE-17A980FA05A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{7141C69F-213C-480B-9A7C-B95C5FBC47CA}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{3E58D442-95B2-49C8-AC2C-07DF7CB56645}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\IntroToMobileAppDevelopmentWebService-WAWS-dev.json = PublishScripts\Configurations\IntroToMobileAppDevelopmentWebService-WAWS-dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D9F766B-EFD5-4AAB-9C7F-7899274A73E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D9F766B-EFD5-4AAB-9C7F-7899274A73E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D9F766B-EFD5-4AAB-9C7F-7899274A73E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D9F766B-EFD5-4AAB-9C7F-7899274A73E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34E5B02B-3615-4793-A5FE-17A980FA05A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34E5B02B-3615-4793-A5FE-17A980FA05A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34E5B02B-3615-4793-A5FE-17A980FA05A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34E5B02B-3615-4793-A5FE-17A980FA05A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3E58D442-95B2-49C8-AC2C-07DF7CB56645} = {7141C69F-213C-480B-9A7C-B95C5FBC47CA}
+	EndGlobalSection
+EndGlobal
