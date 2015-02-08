@@ -91,9 +91,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\RandomNumberControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controllers\HomeControllerTest.cs" />
-    <Compile Include="Controllers\ValuesControllerTest.cs" />
+    <Compile Include="Utilities\RandomNumberGeneratorTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
