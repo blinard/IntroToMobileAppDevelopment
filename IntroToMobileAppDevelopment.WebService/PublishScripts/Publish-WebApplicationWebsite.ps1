@@ -7,8 +7,8 @@ For more detailed documentation go to: http://go.microsoft.com/fwlink/?LinkID=39
 
 .EXAMPLE
 PS C:\> .\Publish-WebApplicationWebSite.ps1 `
--Configuration .\Configurations\WebApplication1-WAWS-dev.json `
--WebDeployPackage ..\WebApplication1\WebApplication1.zip `
+-Configuration .\Configurations\IntroToMobileAppDevelopmentWebService-WAWS-dev.json `
+-WebDeployPackage ..\\IntroToMobileAppDevelopment.WebService\bin\IntroToMobileAppDevelopment.WebService.zip `
 -Verbose
 
 #>
