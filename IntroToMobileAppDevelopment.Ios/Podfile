@@ -1,0 +1,11 @@
+# Uncomment this ne to define a global platform for your project
+ platform :ios, '8.1'
+
+target 'IntroToMobileAppDevelopment.Ios' do
+pod 'Unirest', '~> 1.1.3'
+end
+
+target 'IntroToMobileAppDevelopment.IosTests' do
+
+end
+
