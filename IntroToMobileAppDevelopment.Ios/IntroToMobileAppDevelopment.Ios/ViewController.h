@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *btnGetANumber;
+@property (weak, nonatomic) IBOutlet UILabel *lblNumber;
 
 @end
 
