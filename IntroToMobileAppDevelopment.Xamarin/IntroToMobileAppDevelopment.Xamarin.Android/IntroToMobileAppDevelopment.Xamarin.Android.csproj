@@ -61,4 +61,10 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\IntroToMobileAppDevelopment.Xamarin.Presenters\IntroToMobileAppDevelopment.Xamarin.Presenters.csproj">
+      <Project>{2FEAB9B1-5741-4C72-A1E5-06C2BBC01516}</Project>
+      <Name>IntroToMobileAppDevelopment.Xamarin.Presenters</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

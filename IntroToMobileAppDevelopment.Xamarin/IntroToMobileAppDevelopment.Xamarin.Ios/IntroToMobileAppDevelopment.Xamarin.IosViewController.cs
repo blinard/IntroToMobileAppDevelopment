@@ -3,50 +3,39 @@ using System.Drawing;
 
 using Foundation;
 using UIKit;
+using IntroToMobileAppDevelopment.Xamarin.Presenters;
 
 namespace IntroToMobileAppDevelopment.Xamarin.Ios
 {
-	public partial class IntroToMobileAppDevelopment_Xamarin_IosViewController : UIViewController
+	public partial class IntroToMobileAppDevelopment_Xamarin_IosViewController : UIViewController, IMainPageView
 	{
+		private MainPagePresenter _presenter;
+
 		public IntroToMobileAppDevelopment_Xamarin_IosViewController (IntPtr handle) : base (handle)
 		{
 		}
-
-		public override void DidReceiveMemoryWarning ()
-		{
-			// Releases the view if it doesn't have a superview.
-			base.DidReceiveMemoryWarning ();
-			
-			// Release any cached data, images, etc that aren't in use.
-		}
-
-		#region View lifecycle
 
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
 			
-			// Perform any additional setup after loading the view, typically from a nib.
+			_presenter = new MainPagePresenter ();
+			_presenter.SetView (this);
 		}
 
-		public override void ViewWillAppear (bool animated)
+		partial void btnGetANumber_OnTouchUpInside (UIButton sender)
 		{
-			base.ViewWillAppear (animated);
+			if (OnGetANumberClicked != null)
+				OnGetANumberClicked(this, EventArgs.Empty);
 		}
 
-		public override void ViewDidAppear (bool animated)
-		{
-			base.ViewDidAppear (animated);
-		}
+		#region IMainPageView implementation
 
-		public override void ViewWillDisappear (bool animated)
-		{
-			base.ViewWillDisappear (animated);
-		}
+		public event EventHandler OnGetANumberClicked;
 
-		public override void ViewDidDisappear (bool animated)
+		public void DisplayNumberMessage (MainPageModel model)
 		{
-			base.ViewDidDisappear (animated);
+			lblNumberMessage.Text = model.NumberMessage;
 		}
 
 		#endregion

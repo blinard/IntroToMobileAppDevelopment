@@ -6,29 +6,45 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using IntroToMobileAppDevelopment.Xamarin.Presenters;
 
 namespace IntroToMobileAppDevelopment.Xamarin.Android
 {
 	[Activity (Label = "IntroToMobileAppDevelopment.Xamarin.Android", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : Activity
+	public class MainActivity : Activity, IMainPageView
 	{
-		int count = 1;
+		private Button btnGetANumber;
+		private TextView tvNumberMessage;
+		private MainPagePresenter _presenter;
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
-			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
+			_presenter = new MainPagePresenter ();
+			_presenter.SetView (this);
+
+			btnGetANumber = FindViewById<Button> (Resource.Id.btnGetANumber);
+			tvNumberMessage = FindViewById<TextView> (Resource.Id.tvNumberMessage);
+
+			btnGetANumber.Click += (object sender, EventArgs e) => {
+				if (OnGetANumberClicked != null)
+					OnGetANumberClicked(this, EventArgs.Empty);
 			};
 		}
+
+		#region IMainPageView implementation
+
+		public event EventHandler OnGetANumberClicked;
+
+		public void DisplayNumberMessage (MainPageModel model)
+		{
+			tvNumberMessage.Text = model.NumberMessage;
+		}
+
+		#endregion
 	}
 }
 

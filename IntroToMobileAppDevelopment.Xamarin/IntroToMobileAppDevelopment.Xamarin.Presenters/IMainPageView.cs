@@ -2,8 +2,10 @@
 
 namespace IntroToMobileAppDevelopment.Xamarin.Presenters
 {
-	public interface IMainPage
+	public interface IMainPageView
 	{
+		event EventHandler OnGetANumberClicked;
+		void DisplayNumberMessage (MainPageModel model);
 	}
 }
 

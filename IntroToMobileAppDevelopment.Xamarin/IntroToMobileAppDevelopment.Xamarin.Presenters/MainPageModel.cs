@@ -7,6 +7,8 @@ namespace IntroToMobileAppDevelopment.Xamarin.Presenters
 		public MainPageModel ()
 		{
 		}
+
+		public string NumberMessage {get;set;}
 	}
 }
 
