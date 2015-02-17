@@ -31,7 +31,7 @@ namespace IntroToMobileAppDevelopment.WebService.Utilities
         {
             lock (_lock)
             {
-                return _random.Next(0,200);
+                return _random.Next(0,50);
             }
         }
     }
